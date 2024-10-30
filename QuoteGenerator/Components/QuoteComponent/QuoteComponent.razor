@@ -1,0 +1,31 @@
+﻿@rendermode InteractiveServer
+
+@if(QuoteService.Ready && QuoteService.SelectedQuote != null)
+{
+    <div class="quote-container">
+        <div class="quote-text">
+            <i class="fas fa-quote-left"></i>
+            <span class="@(QuoteService.SelectedQuote.Text.Length > 90 ? "quote" : "long-quote")">
+                @QuoteService.SelectedQuote.Text
+           </span>
+        </div>
+        <div class="quote-author">
+            @if(string.IsNullOrEmpty(QuoteService.SelectedQuote.Author))
+            {
+                <span>Unknown</span>
+            } else
+            {
+                <span>@QuoteService.SelectedQuote.Author</span>
+            }         
+        </div>
+        <div class="button-container">
+            <button class="x-button" title="Post This" @onclick="HandlePostToX"><i class="fab fa-x-twitter"></i></button>
+            <button @onclick="HandleRandomQuoteClick">New Quote</button>
+        </div>
+    </div>
+}
+else
+{
+    <Loader/>
+}
+

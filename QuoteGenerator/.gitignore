@@ -1,0 +1,7 @@
+﻿# Ignore Visual Studio temporary files, build results, and
+# your secret keys or sensitive information
+.vs/
+.vscode/
+bin/
+obj/
+secrets.json
