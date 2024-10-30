@@ -1,0 +1,24 @@
+# Ignore ASP.NET Core project build output and other generated files
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated VS Code files
+.vscode/
+.vscode/settings.json
+
+# IIS generated project files
+.publish/
+.publish.xml
+
+# Entity Framework Core Migration files
+**/Migrations
+
+# Optional: Ignore secrets.json if you have sensitive settings
+secrets.json
